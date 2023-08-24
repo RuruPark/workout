@@ -1,0 +1,105 @@
+#조건문을 사용한 예외처리
+#정수만 입력해야하는 코드에서 정수가 아닐 경우의 예외 처리. isdigit 함수를 이용해 숫자로만 구성된 글자인지 확인.
+input_int = int(input("정수 입력>" )) #정수가 아닐 경우 예외가 발생
+input_int = input("정수 입력>")
+if intput_int.isdigit():
+    number_input = int(input_int)
+    # 코드작성
+else:
+    print("정수가 아닙니다.")
+
+#try except 구문을 사용한 예외처리
+try:
+    #예외가 발생할 수 있는 코드
+except:
+    #예외 발생 시 실행할 코드(아무 것도 넣지 않을 경우 오류가 발생하므로 pass 입력)
+else:
+    #예외가 발생하지 않았을 때 실행할 코드
+finally:
+    #무조건 실행하는 코드
+
+#10952번
+#각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
+#각 테스트 케이스마다 A+B를 출력한다.
+
+#컴파일 에러
+A, B = map(int,input().split())
+while A!= 0 and B!= 0:
+    if A+B==0:
+        break
+    else:
+        print(A+B)
+#출력초과
+A, B = map(int, input().split())
+if A!=0 and B!=0:
+    while  True: #NameError: true
+        print(A+B)
+else:
+    break
+
+while True:
+    A, B = map(int, input().split())
+    if A==0 and B==0:
+        break
+    else:
+        print(A+B)
+
+#각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
+#각 테스트 케이스마다 A+B를 출력한다.
+
+while True:
+    try: #테스트 케이스의 개수가 주어지지 않아 try except 문으로 예외처리
+        A, B = map(int,input().split())
+        print(A+B)
+    except:
+        break
+#11021
+#첫째 줄에 테스트 케이스의 개수 T가 주어진다.
+#각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
+#각 테스트 케이스마다 "Case #x: "를 출력한 다음, A+B를 출력한다. 테스트 케이스 번호는 1부터 시작한다.
+
+T = int(input())
+for i in range(T):
+    A, B = map(int,input().split())
+    print("Case #{}: {}".format(int(i)+1,A+B)) #컴파일 에러: )미입력
+
+#T라는 변수를 고려하지 않았을 때 list를 만들어 반복 수를 len(list)로 계산.
+T = int(input())
+list =[]
+for i in range(T):
+    A, B = map(int,input().split())
+    list.append(1)
+    print("Case #{}: {}".format(len(list),A+B))
+
+#11022
+#첫째 줄에 테스트 케이스의 개수 T가 주어진다.
+#각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
+#각 테스트 케이스마다 "Case #x: A + B = C" 형식으로 출력한다. x는 테스트 케이스 번호이고 1부터 시작하며, C는 A+B이다.
+
+T = int(input())
+for i in range(T):
+    A, B = map(int,input().split())
+    print("Case #{}: {} + {} = {}".format(i+1,A,B,A+B))
+
+#2438
+#첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제
+#첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다. / 첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.
+
+N = int(input())
+for i in range(N):
+    print("*"*(i+1))
+
+#2439
+#첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제
+#하지만, 오른쪽을 기준으로 정렬한 별(예제 참고)을 출력하시오.
+#첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다. / 첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.
+
+#출력 형식 오류
+N = int(input())
+for i in range(1,N+1):
+    print("*"*i.rjust(N))
+
+#ljust(전체자릿수), rjust(전체자릿수) - 왼쪽정렬, 오른쪽정렬
+N = int(input())
+for i in range(1,N+1):
+    print(str("*"*i).rjust(N))
