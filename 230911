@@ -1,0 +1,24 @@
+2738
+N*M크기의 두 행렬 A와 B가 주어졌을 때, 두 행렬을 더하는 프로그램을 작성하시오.
+첫째 줄에 행렬의 크기 N 과 M이 주어진다. 둘째 줄부터 N개의 줄에 행렬 A의 원소 M개가 차례대로 주어진다. 이어서 N개의 줄에 행렬 B의 원소 M개가 차례대로 주어진다. 
+첫째 줄부터 N개의 줄에 행렬 A와 B를 더한 행렬을 출력한다. 행렬의 각 원소는 공백으로 구분한다.
+
+N, M = map(int,input().split())
+A, B = [],[]
+for _ in range(N):
+  A.append(list(map(int,input().split()))) #map함수는 맵 객체를 반환해서 list로 바꿔준다.
+for _ in range(N):
+  B.append(list(map(int,input().split())))
+for i in range(N):
+    for j in range(M):
+      print(A[i][j]+B[i][j],end =' ') #end=' '으로 공백으로 출력
+    print() #13번 반복문 끝나고 띄어쓰기. 14번이랑 같이 들여쓰기하면 결과값이 전부 띄어쓰기되어 출력된다.
+
+#EOFError
+for _ in range(N): 
+    for _ in range(M): #N개의 줄에 M개를 입력받는 것이기 때문에 M번 반복해서 append 받을 필요 없이 20번에서 한번에 입력받는다.
+        A.append(list(map(int,input().split())))
+
+for _ in range(N):
+    for _ in range(M):
+        B.append(list(map(int,input().split())))
