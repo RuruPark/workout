@@ -1,0 +1,16 @@
+10798
+li = [input() for _ in range(5)]
+length = 0
+word = ''
+for i in li:
+    if len(i)>length:
+        length=len(i)
+for i in range(5):
+    if len(li[i])<length:
+        li[i]+="*"*(length-len(li[i]))
+for j in range(length):
+  for k in range(5):
+    word+="".join(li[k][j]) #구분자.join(리스트) 구분자를 넣어서 하나의 문자열로 만들어줌
+print(word.replace("*","")) #공백을 채우기 위해 넣었던 *을 제거 replace(a,b) a를 b로 바꿈
+
+#word="".join(li[k][j]) for문에서 word가 계속 새로운 문자열로 바뀌다가 마지막 문자열만 출력
