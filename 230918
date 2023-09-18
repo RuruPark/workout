@@ -1,0 +1,5 @@
+N, B = input().split()
+print(int(N,int(B)))
+
+#int(string,base): n진수를 10진수로,string에 n진수 숫자, base에 진법
+2745
