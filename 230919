@@ -1,0 +1,17 @@
+N, B = map(int,input().split())
+def convert_notation(n,base):
+    T = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    q, r = divmod(n,base)
+
+    return convert_notation(q,base)+T[r] if q else T[r] #위의 연산에서 나온 몫을 다시 함수로 적용시켜서 나중에 계산해서 나온 나머지값들을 리턴값의 앞부분으로 보낸다
+print(convert_notation(N, B))
+
+#10진법 수와 진법 입력
+#def 진변변환 함수 선언(10진법 수,진법):
+    #10진법을 넘어설 때, 10은 A 35는 Z/T 문자열로 지정
+    #divmod(n,base) n을 base로 나눈 몫과 나머지를 q,r로 지정
+    #리턴 (n을 base로 나눈 몫과 base를 위의 함수에 적용)+T[r] - q가 0이 아닐 때/ 몫이 0이면 T[r] 몫이 0일때의 나머지는 0이기 전의 연산의 몫.
+
+#10진수를 N진수로 바꿀 때, 10진수 값을 N으로 계속 나눠 나머지를 구하고 나누어지지 않을 때까지 연산한 후, 마지막 연산의 몫,나머지부터 거꾸로 읽으면 N진수의 값을 얻는다.
+#6의 리턴값 설정으로 값을 뒤집을 필요 없음
+11005
