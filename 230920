@@ -1,0 +1,11 @@
+T = int(input())
+li = []
+for _ in range(T):
+    li.append(int(input()))
+for C in li:
+    for i in [25,10,5,1]:
+        q,C = divmod(C,i) #i로 나눈 나머지를 다시 C로 지정해서 다음 C로 나눠줌
+        print(q,end=' ')
+    print()
+
+    2720
