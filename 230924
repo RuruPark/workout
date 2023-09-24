@@ -1,0 +1,9 @@
+N = int(input()) #벌집의 수 입력
+floor = 1 #1번 벌집부터 1층, 층의 수
+count = 1 #벌집의 수
+while N>count: #주어진 벌집 수가 더 클 때, 반복
+  count+=6*floor #6,12,18..로 늘어나므로 6*floor 
+  floor+=1
+print(floor) #N값이 1이면 바로 floor의 초기 값 출력
+
+2292
