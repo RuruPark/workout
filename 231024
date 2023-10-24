@@ -1,0 +1,16 @@
+1193
+X = int(input())
+max_num = 0 #대각선에서 가장 큰 순번
+line = 0 #대각선 번호
+while X>max_num: #X가 대각선에서 가장 큰 순번보다 작을 때까지 반복
+    line+=1 #X가 속한 대각선 번호
+    max_num+=line #X가 속한 대각선에서 가장 큰 순번
+gap = max_num-X
+if line%2==0: #짝수번째 대각선
+    num = line-gap 
+    den = 1+gap
+else: #홀수번째 대각선
+    num = 1+gap
+    den = line-gap
+#짝수번째 대각선과 홀수번째 대각선은 분모와 분자의 규칙이 정반대
+print(f'{num}/{den}')
