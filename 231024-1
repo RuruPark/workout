@@ -1,0 +1,5 @@
+2869
+import math
+a,b,v =map(int,input().split())
+day=math.ceil((v-a)/(a-b))+1 #v=(a-b)n+a를 이용해서 n에 대한 식+1 /ceil로 소수를 올림하는 정수 반환
+print(day)
