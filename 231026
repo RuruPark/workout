@@ -1,0 +1,27 @@
+9506
+while True:
+    n = int(input())
+    j = []
+    if n==-1:
+        break
+    for i in range(1,n):
+        if n%i==0:
+            j.append(i)
+    if sum(j)==n:
+        print(f'{n} = {" + ".join(map(str,j))}')
+    else:
+        print(f'{n} is NOT perfect.')
+
+1978
+a = []
+p = 0
+n = int(input())
+a.append(map(int,input().split())) #수정하기
+for i in a:
+    k= []
+    for j in range(1,i+1):
+        if i%j==0:
+            k.append(j)
+    if len(k)==2:
+        p+=1
+print(p)
