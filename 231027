@@ -1,0 +1,33 @@
+1978
+p = 0
+n = int(input())
+a = map(int,input().split())
+for i in a:
+    k = 0
+    for j in range(1,i+1):
+        if i%j==0:
+            k+=1
+    if k==2:
+        p+=1
+print(p)
+
+2581
+m = int(input())
+n = int(input())
+a = []
+p = []
+for i in range(m,n+1):
+    a.append(i)
+for j in a:
+    k = 0
+    for l in range(1,j+1):
+        if j%l==0:
+            k+=1
+    if k==2:
+        p.append(l)
+if len(p)==0:
+    print(-1)
+else:
+    print(sum(p))
+    print(min(p))
+#조금 더 빨리 구하는 방법 생각해보기
