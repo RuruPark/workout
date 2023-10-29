@@ -1,0 +1,33 @@
+11653
+n = int(input())
+a = 2
+while n>1:
+    if n%a==0:
+        print(a)
+        n = n/a
+    else:
+        a+=1
+
+27323
+a = int(input())
+b = int(input())
+print(a*b)
+
+1085
+x, y, w, h = map(int,input().split())
+a = [abs(x-w),abs(y-h),abs(x-0),abs(y-0)] #abs(): 절댓값을 구하는 함수
+print(min(a))
+
+3009
+a = []
+b = []
+for i in range(3):
+    x, y = map(int,input().split())
+    a.append(x)
+    b.append(y)
+for j in a:
+    if a.count(j)==1:
+        print(j,end=" ")
+for k in b:    
+    if b.count(k)==1:
+        print(k)
