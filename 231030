@@ -1,0 +1,55 @@
+15894
+n = int(input())
+print(n*4)
+
+9063
+n = int(input())
+a = []
+b = []
+for i in range(n):
+    x, y = map(int,input().split())
+    a.append(x)
+    b.append(y)
+print((max(a)-min(a))*(max(b)-min(b)))
+
+10101
+a = int(input())
+b = int(input())
+c = int(input())
+if a+b+c!=180:
+    print('Error')
+else:
+    if a==b==60:
+        print('Equilateral')
+    elif a==b or b==c or c==a:
+        print('Isosceles')
+    else:
+        print('Scalene')
+
+5073
+while True:
+  a = list(map(int,input().split()))
+  if a[0]==0:
+    break
+  else:
+    a.sort()
+    if a[2]>=a[0]+a[1]:
+      print("Invalid")
+    else:
+      if a[0]==a[1]==a[2]:
+        print('Equilateral')
+      elif a[0]!=a[1] and a[1]!=a[2] and a[2]!=a[0]:
+        print('Scalene')
+      else:
+        print('Isosceles')
+    a = []
+
+14215
+T = list(map(int,input().split()))
+T.sort()
+while True:
+    if T[2]>=T[0]+T[1]:
+        T[2]-=1
+    else:
+      print(sum(T))
+      break
