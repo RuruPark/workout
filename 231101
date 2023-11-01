@@ -1,0 +1,24 @@
+24263
+n = int(input())
+print(n) #O(n):입력값이 증가함에 따라 시간도 같은 비율로 증가
+print(1)
+
+24264
+n = int(input())
+print(n**2) #O(n2):입력값이 증가함에 따라 시간이 n의 제곱수의 비율로 증가
+print(2)
+
+24265
+n = int(input())
+print(int(n*(n-1)/2)) #1부터 n-1까지의 합
+print(2)
+
+24266
+n =int(input())
+print(n**3)
+print(3)
+
+24267
+n = int(input())
+print(int((n-2)*(n-1)*n/6))
+print(3)
