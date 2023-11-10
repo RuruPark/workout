@@ -1,0 +1,22 @@
+2798
+#c에서 숫자 3개를 뽑아서 그 합이 m에 가장 가까운 수를 출력
+#무작위로 3개 뽑아서 더한 모든 경우를 리스트로 만들어서 그 중에서 m에 가까운 수를 출력
+import itertools
+n,m = map(int,input().split())
+c = input().split()
+com = []
+for i in itertools.combinations(c,3): #조합을 사용해 c에서 순서상관없이 3개 뽑는 모든 조합을 튜플의 이터레이터로 반환
+  i = list(map(int,i)) #문자열로 구성된 리스트를 map를 사용해 정수형으로 변환
+  if sum(i)<=m:
+    com.append(sum(i))
+print(max(com))
+
+#c를 입력받을 때 바로 map으로 정수형으로 바꿈
+import itertools
+n,m = map(int,input().split())
+c = map(int,input().split())
+com = []
+for i in itertools.combinations(c,3):
+  if sum(i)<=m:
+    com.append(sum(i))
+print(max(com))
